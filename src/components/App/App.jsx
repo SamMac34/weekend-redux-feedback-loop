@@ -2,6 +2,8 @@ import React from 'react';
 import axios from 'axios';
 import './App.css';
 import { HashRouter as Router, Route, Link } from 'react-router-dom/cjs/react-router-dom.min';
+import FeelingForm from '../FeelingForm/FeelingForm';
+import UnderstandForm from '../UnderstandForm/UnderstandForm';
 
 function App() {
 
@@ -23,6 +25,8 @@ function App() {
             <Link>X</Link>
           </li>
         </nav>
+        <FeelingForm />
+        <UnderstandForm />
 
       </div>
     </Router>
