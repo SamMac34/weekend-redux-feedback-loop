@@ -1,18 +1,20 @@
 const express = require('express');
-const router = new express.Router();
-const pool = require('./modules/pool');
+const router = express.Router();
+const pool = require('../modules/pool');
 
+// POST to DB
 router.post('/', (req, res) => {
-    let newFeedback = req.body.feedbackReducer;
-    let queryText =
-        `INSERT INTO feedback (feeling, understanding, support, comments)
-        VALUES ($1, $2, $3, $4)`;
-    pool.query(queryText, [newFeedback])
-}).then(res => {
-    res.sendStatus(201);
-}).catch(err => {
-    console.log('Error Posting to DB', err);
-    res.sendStatus(500);
+    const feedback = req.body;
+    const sqlText = `INSERT INTO feedback (feeling, understanding, support, comments)
+                     VALUES ($1, $2, $3, $4);`;
+    pool.query(sqlText, [feedback.feeling, feedback.understanding, feedback.support, feedback.comments])
+        .then(response => {
+            console.log('Added feedback to the DB', feedback);
+            res.sendStatus(201);
+        }).catch(err => {
+            console.log('Error posting to DB', err);
+            res.sendStatus(500);
+        })
 });
 
 module.exports = router;

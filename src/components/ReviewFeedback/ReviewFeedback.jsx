@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { useSelector } from "react-redux/es/hooks/useSelector";
 
@@ -7,14 +8,14 @@ function ReviewFeedback() {
     const feedbackReducer = useSelector(store => store.feedbackReducer);
 
     const postFeedback = () => {
-        axios.post( '/feedback', feedbackReducer )
+        axios.post('/feedback', feedbackReducer)
         .then(res => {
-            feedbackReducer
-            history.pushState('/submitsuccess');
+            console.log('in postFeedback, res is:', res);
+            history.push('/submitsuccess');
         }).catch(err => {
-            console.log('Error Posting to DB', err);
+            console.log('Error Posting to server', err);
         });
-    }
+    };
 
     return (
         <div>
@@ -23,9 +24,9 @@ function ReviewFeedback() {
             <h3>Understanding: {feedbackReducer.understanding}</h3>
             <h3>Support: {feedbackReducer.support}</h3>
             <h3>Comments: {feedbackReducer.comments}</h3>
-            <button onSubmit={postFeedback} type="submit" >SUBMIT</button>
+            <button onClick={postFeedback} type="button" >SUBMIT</button>
         </div>
     )
-}
+};
 
-export default ReviewFeedback
+export default ReviewFeedback;
