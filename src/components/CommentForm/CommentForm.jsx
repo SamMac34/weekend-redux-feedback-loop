@@ -15,9 +15,6 @@ function CommentForm() {
 
     // Require input between 1-5 and send to Redux store
     const addComment = () => {
-        if (comment === '' || comment > 5 || comment < 1) {
-            alert('Must enter a value between 1-5 to continue.')
-        } else
             dispatch({
                 type: 'ADD_COMMENT',
                 payload: comment,
