@@ -4,6 +4,8 @@ import './App.css';
 import { HashRouter as Router, Route, Link } from 'react-router-dom/cjs/react-router-dom.min';
 import FeelingForm from '../FeelingForm/FeelingForm';
 import UnderstandForm from '../UnderstandForm/UnderstandForm';
+import SupportForm from '../SupportForm/SupportForm';
+import CommentForm from '../CommentForm/CommentForm';
 
 function App() {
 
@@ -22,18 +24,24 @@ function App() {
             <Link to="/understandform">UnderstandForm</Link>
           </li>
           <li>
-            <Link to="supportform">SupportForm</Link>
+            <Link to="/supportform">SupportForm</Link>
+          </li>
+          <li>
+            <Link to="/commentform">CommentForm</Link>
           </li>
         </nav>
         <Route path="/feelingform">
-        <FeelingForm />
+          <FeelingForm />
         </Route>
         <Route path="/understandform">
-        <UnderstandForm />
+          <UnderstandForm />
         </Route>
-        {/* <Route>
+        <Route path="/supportform">
           <SupportForm />
-        </Route> */}
+        </Route>
+        <Route path="/commentform">
+          <CommentForm />
+        </Route>
 
       </div>
     </Router>

@@ -22,7 +22,7 @@ function SupportForm() {
                 type: 'ADD_SUPPORT',
                 payload: support,
             }),
-                history.push('/supportform');
+                history.push('/commentform');
     };
 
     // DOM
