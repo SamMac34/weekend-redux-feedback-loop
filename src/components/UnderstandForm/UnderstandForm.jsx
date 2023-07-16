@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
+// Component to handle understanding response
 function UnderstandForm() {
     const dispatch = useDispatch();
     const history = useHistory();
@@ -24,6 +25,7 @@ function UnderstandForm() {
                 history.push('/supportform');
     };
 
+    // DOM
     return (
         <form>
             <h2>How well are you understanding the content?</h2>

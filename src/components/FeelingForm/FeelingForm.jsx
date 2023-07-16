@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
+// Component to handle feeling response
 function FeelingForm() {
     const dispatch = useDispatch();
     const history = useHistory();
@@ -24,6 +25,7 @@ function FeelingForm() {
                 history.push('/understandform');
     };
 
+    // Display on DOM
     return (
         <form>
             <h2>How are you feeling today?</h2>
