@@ -13,7 +13,7 @@ function UnderstandForm() {
         setUnderstand(event.target.value);
     };
 
-    // Require input between 1-5 and send to Redux store
+    // Require input value between 1-5, send value to Redux store, and direct to next page
     const addUnderstand = () => {
         if (understand === '' || understand > 5 || understand < 1) {
             alert('Must enter a value between 1-5 to continue.')
@@ -42,4 +42,5 @@ function UnderstandForm() {
     )
 };
 
+// Export component
 export default UnderstandForm;

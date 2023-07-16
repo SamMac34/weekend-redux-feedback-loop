@@ -8,9 +8,7 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from "react-redux";
 import logger from "redux-logger";
 
-
 // Feedback reducer
-// { feeling: , understanding: , support: , comments: }
 const feedbackReducer = (state = {
     feeling: '', 
     understanding: '',
@@ -18,14 +16,15 @@ const feedbackReducer = (state = {
     comments: ''},
     action) => {
     if (action.type === 'ADD_FEELING') {
-        console.log('In feedback reducer:', action.payload, state)
         return { ...state, feeling: action.payload }; 
     } else if (action.type === 'ADD_UNDERSTAND'){
-        return { ...state, understanding: action.payload }
+        return { ...state, understanding: action.payload };
     } else if (action.type === 'ADD_SUPPORT') {
-        return { ...state, support: action.payload }
+        return { ...state, support: action.payload };
     } else if (action.type === 'ADD_COMMENT') {
-        return { ...state, comments: action.payload }
+        return { ...state, comments: action.payload };
+    } else if (action.type === 'RESET_FEEDBACK') {
+        return { feeling: '', understanding: '',support: '', comments: '' };
     }
     return state;
 };
@@ -38,6 +37,7 @@ const store = createStore(
     applyMiddleware(logger)
 );
 
+// Render to DOM
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
    

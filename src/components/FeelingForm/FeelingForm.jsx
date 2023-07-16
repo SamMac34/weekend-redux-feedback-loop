@@ -13,7 +13,7 @@ function FeelingForm() {
         setFeeling(event.target.value);
     };
 
-    // Require input between 1-5 and send to Redux store
+    // Require input value between 1-5, send to Redux store, and direct to next page
     const addFeeling = () => {
         if (feeling === '' || feeling > 5 || feeling < 1) {
             alert('Must enter a value between 1-5 to continue.');
@@ -40,6 +40,7 @@ function FeelingForm() {
             <button onClick={addFeeling} type="button">NEXT</button>
         </form>
     )
-}
+};
 
+// Export component
 export default FeelingForm;

@@ -13,7 +13,7 @@ function SupportForm() {
         setSupport(event.target.value);
     };
 
-    // Require input between 1-5 and send to Redux store
+    // Require input value between 1-5, send to Redux store, and direct to next page
     const addSupport = () => {
         if (support === '' || support > 5 || support < 1) {
             alert('Must enter a value between 1-5 to continue.')
@@ -42,4 +42,5 @@ function SupportForm() {
     )
 };
 
+// Export component
 export default SupportForm;

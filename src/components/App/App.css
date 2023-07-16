@@ -1,3 +1,4 @@
+/* APP */
 .App {
   text-align: center;
 }
@@ -22,12 +23,26 @@ h4 {
   font-style: italic;
 }
 
+/* FORM */
+form, #review-container {
+  border: 2px solid #033076;
+  box-shadow: 5px 5px 10px 2px rgb(51, 47, 78);
+  margin: 10em auto;
+  max-width: 35em;
+}
+
 input {
-  min-width: 4em;
+  border: none;
+  border-bottom: 1px solid black;
+  margin: 2em;
+  min-width: 6em;
   padding: 0.5em;
-  margin: 1em;
 }
 
 button {
+  background-color: #2f63b7;
+  border-radius: 5px;;
+  color: white;
+  margin: 2em auto;
   padding: 0.5em;
 }

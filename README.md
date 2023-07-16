@@ -1,9 +1,17 @@
-# Project Name
-
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+# Weekend Redux Feedback Loop
 
 ## Description
+Project duration: 2 days
 
-Your project description goes here. What problem did you solve? How did you solve it?
+A reflection/feedback app modeled after Prime Academies system.  Users will respond to questions over 4 pages, review their responses, and then submit them to be saved in a database.
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+### Setup
+
+1. Create your database and tables using the provided `data.sql` file.
+
+2. Open a terminal window and run `npm install`.
+
+3. Next, run `npm run server`.
+
+4. Now that the server is running, open a new terminal and start the react client app 
+    with `npm run client`.

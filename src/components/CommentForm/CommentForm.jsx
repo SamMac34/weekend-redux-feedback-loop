@@ -13,13 +13,13 @@ function CommentForm() {
         setComment(event.target.value);
     };
 
-    // Require input between 1-5 and send to Redux store
+    // Require input value between 1-5, send to Redux store, and direct to next page
     const addComment = () => {
-            dispatch({
-                type: 'ADD_COMMENT',
-                payload: comment,
-            }),
-                history.push('/reviewfeedback');
+        dispatch({
+            type: 'ADD_COMMENT',
+            payload: comment,
+        }),
+            history.push('/reviewfeedback');
     };
 
     // DOM
@@ -30,10 +30,12 @@ function CommentForm() {
                 id="comment-input"
                 onChange={handleComment}
                 type="text"
+                placeholder="Enter comment"
             />
             <button onClick={addComment} type="button">NEXT</button>
         </form>
     )
 };
 
+// Export component
 export default CommentForm;
