@@ -23,12 +23,14 @@ h4 {
   font-style: italic;
 }
 
-/* FORM */
-form, #review-container {
+/* FORMS AND CONTAINERS */
+form, #review-container, #submit-success-container {
   border: 2px solid #033076;
   box-shadow: 5px 5px 10px 2px rgb(51, 47, 78);
   margin: 10em auto;
   max-width: 35em;
+  overflow: auto;
+  padding: 1em;
 }
 
 input {

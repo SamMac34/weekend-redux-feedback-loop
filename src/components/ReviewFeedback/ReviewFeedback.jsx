@@ -27,7 +27,7 @@ function ReviewFeedback() {
             <h3>Feelings: {feedbackReducer.feeling}</h3>
             <h3>Understanding: {feedbackReducer.understanding}</h3>
             <h3>Support: {feedbackReducer.support}</h3>
-            <h3>Comments: {feedbackReducer.comments}</h3>
+            <h3 id="review-feedback-comment-line">Comments: {feedbackReducer.comments}</h3>
             <button onClick={postFeedback} type="button" >SUBMIT</button>
         </div>
     )

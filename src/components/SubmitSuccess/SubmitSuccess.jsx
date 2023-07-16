@@ -16,10 +16,10 @@ function SubmitSuccess() {
 
     // DOM
     return (
-        <>
+        <div id="submit-success-container">
             <h2>Thank you for your feedback!</h2>
             <button onClick={resetFeedback}>Leave New Feedback</button>
-        </>
+        </div>
     )
 };
 
