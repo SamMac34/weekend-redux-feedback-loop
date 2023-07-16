@@ -21,3 +21,13 @@
 h4 {
   font-style: italic;
 }
+
+input {
+  min-width: 4em;
+  padding: 0.5em;
+  margin: 1em;
+}
+
+button {
+  padding: 0.5em;
+}

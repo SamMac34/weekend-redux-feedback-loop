@@ -10,7 +10,7 @@ function ReviewFeedback() {
         axios.post( '/feedback', feedbackReducer )
         .then(res => {
             feedbackReducer
-            // history.pushState('/submitsuccess');
+            history.pushState('/submitsuccess');
         }).catch(err => {
             console.log('Error Posting to DB', err);
         });
