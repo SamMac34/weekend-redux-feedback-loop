@@ -7,6 +7,7 @@ import UnderstandForm from '../UnderstandForm/UnderstandForm';
 import SupportForm from '../SupportForm/SupportForm';
 import CommentForm from '../CommentForm/CommentForm';
 import ReviewFeedback from '../ReviewFeedback/ReviewFeedback';
+import SubmitSuccess from '../SubmitSuccess/SubmitSuccess';
 
 function App() {
 
@@ -33,6 +34,9 @@ function App() {
           <li>
             <Link to="/reviewfeedback">Review</Link>
           </li>
+          <li>
+            <Link to="/submitsuccess">SubmitSuccess</Link>
+          </li>
         </nav>
         <Route path="/feelingform">
           <FeelingForm />
@@ -48,6 +52,9 @@ function App() {
         </Route>
         <Route path="/reviewfeedback">
         <ReviewFeedback />
+        </Route>
+        <Route path="/submitsuccess">
+          <SubmitSuccess />
         </Route>
 
       </div>

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
-// Component to handle support response
+// Component to handle support feedback
 function SupportForm() {
     const dispatch = useDispatch();
     const history = useHistory();

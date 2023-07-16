@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
-// Component to handle understanding response
+// Component to handle understanding feedback
 function UnderstandForm() {
     const dispatch = useDispatch();
     const history = useHistory();

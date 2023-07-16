@@ -9,16 +9,16 @@ import { Provider } from "react-redux";
 import logger from "redux-logger";
 
 
-// Response reducer
+// Feedback reducer
 // { feeling: , understanding: , support: , comments: }
-const responseReducer = (state = {
+const feedbackReducer = (state = {
     feeling: '', 
     understanding: '',
     support: '',
     comments: ''},
     action) => {
     if (action.type === 'ADD_FEELING') {
-        console.log('In responses reducer:', action.payload, state)
+        console.log('In feedback reducer:', action.payload, state)
         return { ...state, feeling: action.payload }; 
     } else if (action.type === 'ADD_UNDERSTAND'){
         return { ...state, understanding: action.payload }
@@ -33,7 +33,7 @@ const responseReducer = (state = {
 // Store
 const store = createStore(
     combineReducers({
-        responseReducer
+        feedbackReducer
     }),
     applyMiddleware(logger)
 );

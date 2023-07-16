@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
-// Component to handle comment response
+// Component to handle comment feedback
 function CommentForm() {
     const dispatch = useDispatch();
     const history = useHistory();
