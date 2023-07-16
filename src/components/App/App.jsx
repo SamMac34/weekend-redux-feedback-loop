@@ -16,17 +16,24 @@ function App() {
         </header>
         <nav>
           <li>
-            <Link>FeelingForm</Link>
+            <Link to="/feelingform">FeelingForm</Link>
           </li>
           <li>
-            <Link>UnderstandForm</Link>
+            <Link to="/understandform">UnderstandForm</Link>
           </li>
           <li>
-            <Link>X</Link>
+            <Link to="supportform">SupportForm</Link>
           </li>
         </nav>
+        <Route path="/feelingform">
         <FeelingForm />
+        </Route>
+        <Route path="/understandform">
         <UnderstandForm />
+        </Route>
+        {/* <Route>
+          <SupportForm />
+        </Route> */}
 
       </div>
     </Router>
