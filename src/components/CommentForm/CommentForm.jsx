@@ -19,7 +19,7 @@ function CommentForm() {
                 type: 'ADD_COMMENT',
                 payload: comment,
             }),
-                history.push('/commentform');
+                history.push('/reviewfeedback');
     };
 
     // DOM
