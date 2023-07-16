@@ -9,13 +9,13 @@ function FeelingForm() {
 
     // Capture 'feeling' value
     const handleFeeling = (event) => {
-        setFeeling(event.target.value)
+        setFeeling(event.target.value);
     };
 
     // Require input between 1-5 and send to Redux store
     const addFeeling = () => {
         if (feeling === '' || feeling > 5 || feeling < 1) {
-            alert('Must enter a value between 1-5 to continue.')
+            alert('Must enter a value between 1-5 to continue.');
         } else
             dispatch({
                 type: 'ADD_FEELING',
@@ -35,7 +35,7 @@ function FeelingForm() {
                 max="5"
                 required
             />
-            <button onClick={addFeeling} type="submit">NEXT</button>
+            <button onClick={addFeeling} type="button">NEXT</button>
         </form>
     )
 }
